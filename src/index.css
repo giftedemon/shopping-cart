@@ -128,3 +128,9 @@ legend {
 input[type="file"] {
     max-width: 100%;
 }
+
+/* ----------------------------------------------------------------------------- */
+:root {
+    --product-title-size: 2rem;
+    --price-size: 1.25rem;
+}

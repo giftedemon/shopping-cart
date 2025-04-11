@@ -30,4 +30,12 @@
 .featured_title {
     font-size: 2.5rem;
     font-weight: 500;
+
+    margin-bottom: 2.5rem;
+}
+
+.products {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
 }

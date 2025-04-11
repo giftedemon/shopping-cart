@@ -1,4 +1,5 @@
 import styles from "./Homepage.module.css";
+import Product from "src/components/Product/Product";
 
 function Homepage() {
     return (
@@ -10,6 +11,10 @@ function Homepage() {
 
             <section className={styles.featured}>
                 <h3 className={styles.featured_title}>Our featured products</h3>
+                <div className={styles.products}>
+                    <Product></Product>
+                    <Product></Product>
+                </div>
             </section>
         </>
     );
