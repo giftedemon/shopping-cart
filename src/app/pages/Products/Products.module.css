@@ -1,0 +1,17 @@
+.all_products {
+    text-align: center;
+}
+
+.featured_title {
+    font-size: 2.5rem;
+    font-weight: 500;
+
+    margin-bottom: 2.5rem;
+}
+
+.products_list {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}

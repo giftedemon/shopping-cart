@@ -19,12 +19,12 @@
 }
 
 .description {
-    font-size: 1rem;
+    font-size: 1.4rem;
 }
 
 .featured {
     text-align: center;
-    padding: 3.5rem 1rem;
+    margin-top: 3.5rem;
 }
 
 .featured_title {
@@ -38,4 +38,6 @@
     display: flex;
     gap: 3rem;
     justify-content: center;
+
+    flex-wrap: wrap;
 }
