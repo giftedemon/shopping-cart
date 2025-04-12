@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-
 import useProductsData from "src/hooks/useProductsData";
 import ProductsList from "src/components/ProductsList/ProductsList";
 import styles from "./Products.module.css";
