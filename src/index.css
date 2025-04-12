@@ -132,6 +132,6 @@ input[type="file"] {
 /* ----------------------------------------------------------------------------- */
 
 :root {
-    --product-title-size: 2rem;
+    --product-title-size: 1.5rem;
     --price-size: 1.25rem;
 }
