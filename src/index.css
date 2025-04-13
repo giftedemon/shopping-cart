@@ -135,3 +135,13 @@ input[type="file"] {
     --product-title-size: 1.5rem;
     --price-size: 1.25rem;
 }
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+#icon {
+    line-height: 0;
+}

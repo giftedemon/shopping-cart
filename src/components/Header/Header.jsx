@@ -1,8 +1,6 @@
 import styles from "./Header.module.css";
-import { useState } from "react";
-import Icon from "@mdi/react";
-import { mdiCartOutline } from "@mdi/js";
 import { Link } from "react-router-dom";
+import { MdOutlineShoppingCart } from "react-icons/md";
 
 function Header() {
     return (
@@ -18,9 +16,9 @@ function Header() {
                     <li>
                         <Link to="/products">All products</Link>
                     </li>
-                    <li>
+                    <li id="icon">
                         <Link to="/cart">
-                            <Icon className={styles.cart} path={mdiCartOutline} size={1.2} />
+                            <MdOutlineShoppingCart size={30} />
                         </Link>
                     </li>
                 </ul>

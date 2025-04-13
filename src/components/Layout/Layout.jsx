@@ -8,7 +8,7 @@ function Layout() {
     return (
         <div className={styles.wrapper}>
             <Header></Header>
-            <main>
+            <main className={styles.main}>
                 <Outlet />
             </main>
             <Footer></Footer>

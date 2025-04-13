@@ -1,8 +1,14 @@
 .footer {
-    margin-top: 3rem;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
+    margin-top: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
-.title {
+.content {
     text-align: center;
 }
