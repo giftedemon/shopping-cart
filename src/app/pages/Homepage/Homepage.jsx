@@ -1,12 +1,8 @@
 import { useState, useEffect } from "react";
-
-import useProductsData from "src/hooks/useProductsData";
 import styles from "./Homepage.module.css";
 import ProductsList from "src/components/ProductsList/ProductsList";
 
 function Homepage() {
-    const { data, error, isLoading } = useProductsData(6);
-
     return (
         <>
             <section className={styles.homepage}>
@@ -16,7 +12,7 @@ function Homepage() {
 
             <section className={styles.featured}>
                 <h3 className={styles.featured_title}>Our featured products</h3>
-                <ProductsList data={data} isLoading={isLoading} error={error}></ProductsList>
+                <ProductsList number={6}></ProductsList>
             </section>
         </>
     );
