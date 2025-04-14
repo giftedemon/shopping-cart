@@ -136,12 +136,6 @@ input[type="file"] {
     --price-size: 1.25rem;
 }
 
-html,
-body,
-#root {
-    height: 100%;
-}
-
 #icon {
     line-height: 0;
 }

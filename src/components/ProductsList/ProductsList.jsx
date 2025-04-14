@@ -5,7 +5,9 @@ function ProductsList({ data, error, isLoading }) {
     return (
         <div className={styles.products_list}>
             {isLoading ? (
-                <div className={styles.loader}></div>
+                <div className={styles.placeholder}>
+                    <div className={styles.loader}></div>
+                </div>
             ) : (
                 data.map((item) => {
                     return (
