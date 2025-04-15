@@ -4,7 +4,9 @@ export default function Product({ title, image, price, id, handleClick, inCart }
     return (
         <div className={styles.product} id={id}>
             <div className={styles.img_div}>
-                <img src={image} alt="" className={styles.img} />
+                <object data={image} type="image/jpeg" className={styles.img}>
+                    <img src="src/assets/knight.jpg" alt="" className={styles.img} />
+                </object>
             </div>
             <div className={styles.info}>
                 <h3 className={styles.title}>{title}</h3>

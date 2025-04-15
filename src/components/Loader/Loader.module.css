@@ -1,5 +1,8 @@
 .placeholder {
     min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* HTML: <div class="loader"></div> */

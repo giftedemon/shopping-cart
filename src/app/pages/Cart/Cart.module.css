@@ -1,0 +1,56 @@
+.cart {
+    display: flex;
+    gap: 2rem;
+}
+
+.cart_title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+
+    margin-bottom: 2.5rem;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    flex: 6;
+    gap: 1rem;
+}
+
+.buy {
+    flex: 4;
+
+    border: 3px solid black;
+    border-radius: 10px;
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+
+    height: 100%;
+    gap: 1rem;
+    grid-template-rows: auto 1fr auto;
+}
+
+.buy_title {
+    font-size: 2rem;
+    justify-self: center;
+    font-weight: 500;
+}
+
+.buy_products {
+    align-self: flex-start;
+}
+
+.buy_info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+}
+
+.buy_total {
+    font-size: 2rem;
+    justify-self: center;
+    font-weight: 500;
+}
