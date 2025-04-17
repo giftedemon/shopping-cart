@@ -13,8 +13,8 @@ function ProductsList({ number }) {
         localStorage.setItem("cart", JSON.stringify(localData));
     }, [localData]);
 
-    const addToCart = (id) => {
-        setLocalData((prev) => ({ ...prev, [id]: 1 }));
+    const addToCart = (id, price) => {
+        setLocalData((prev) => ({ ...prev, [id]: { quantity: 1, price: price } }));
     };
 
     const deleteFromCart = (id) => {
@@ -40,6 +40,7 @@ function ProductsList({ number }) {
                             price={item.price}
                             handleClick={item.id in localData ? deleteFromCart : addToCart}
                             inCart={item.id in localData}
+                            color={item.id in localData ? "red" : "green"}
                         ></Product>
                     );
                 })

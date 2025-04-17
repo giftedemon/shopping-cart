@@ -1,20 +1,41 @@
 import styles from "./CartProduct.module.css";
 import { useState, useEffect } from "react";
 
-function CartProduct({ image, title, price, id, decreaseClick, increaseClick, quantity }) {
-    const [inputQuantity, setInputQuantity] = useState();
-
-    const [localData, setLocalData] = useState(JSON.parse(localStorage.getItem("cart") || "{}"));
+function CartProduct({
+    image,
+    title,
+    price,
+    id,
+    decreaseClick,
+    increaseClick,
+    quantity,
+    handleChange,
+}) {
+    const [inputValue, setInputValue] = useState(quantity);
 
     useEffect(() => {
-        localStorage.setItem("cart", JSON.stringify(localData));
-    }, [localData]);
+        setInputValue(quantity);
+    }, [quantity]);
 
-    const addToCart = (id) => {
-        setLocalData((prev) => ({ ...prev, [id]: 1 }));
+    const handleInputChange = (e) => {
+        let value = e.target.value;
+
+        // Allow empty string
+        if (value === "") {
+            setInputValue(value);
+            return;
+        }
+
+        // Only allow digits
+        if (!/^\d+$/.test(value)) return;
+
+        // Prevent leading zeros (unless it's just "0")
+        if (value.length > 1 && value.startsWith("0")) {
+            value = value.replace(/^0+/, "");
+        }
+
+        setInputValue(value);
     };
-
-    // const increaseClick = (id) => {};
 
     return (
         <div className={styles.cart_product}>
@@ -28,9 +49,22 @@ function CartProduct({ image, title, price, id, decreaseClick, increaseClick, qu
                 <p className={styles.price}>Price: ${price}</p>
             </div>
             <div className={styles.quantity}>
-                <button className={styles.less_button}>-</button>
-                <input type="number" className={styles.input} value={quantity} />
-                <button className={styles.more_button}>+</button>
+                <button className={styles.less_button} onClick={() => decreaseClick(id)}>
+                    -
+                </button>
+                <input
+                    type="text"
+                    className={styles.input}
+                    value={inputValue}
+                    onChange={(e) => handleInputChange(e)}
+                    onKeyDown={(e) => {
+                        if (e.key === "Enter") handleChange(e, id);
+                    }}
+                    onBlur={(e) => handleChange(e, id)}
+                />
+                <button className={styles.more_button} onClick={() => increaseClick(id)}>
+                    +
+                </button>
             </div>
         </div>
     );

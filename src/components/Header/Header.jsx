@@ -6,7 +6,7 @@ function Header() {
     return (
         <header className={styles.header}>
             <h1 className={styles.title}>
-                <Link to="/">Ayan Store</Link>
+                <Link to="/">Jojo Store</Link>
             </h1>
             <nav>
                 <ul className={styles.list}>

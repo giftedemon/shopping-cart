@@ -1,6 +1,6 @@
 import styles from "./Product.module.css";
 
-export default function Product({ title, image, price, id, handleClick, inCart }) {
+export default function Product({ title, image, price, id, handleClick, inCart, color }) {
     return (
         <div className={styles.product} id={id}>
             <div className={styles.img_div}>
@@ -13,7 +13,11 @@ export default function Product({ title, image, price, id, handleClick, inCart }
                 <p className={styles.price}>Price: ${price}</p>
             </div>
             <div className={styles.add_cart}>
-                <button className={styles.add_button} onClick={() => handleClick(id)}>
+                <button
+                    className={styles.add_button}
+                    onClick={() => handleClick(id, price)}
+                    style={{ borderColor: color, color: color }}
+                >
                     {inCart ? "Delete from Cart" : "Add to Cart"}
                 </button>
             </div>

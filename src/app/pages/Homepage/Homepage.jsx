@@ -6,7 +6,7 @@ function Homepage() {
     return (
         <>
             <section className={styles.homepage}>
-                <h2 className={styles.title}>Welcome to Ayan Store</h2>
+                <h2 className={styles.title}>Welcome to Jojo Store</h2>
                 <p className={styles.description}>Explore our amazing collection</p>
             </section>
 
